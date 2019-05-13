@@ -1,0 +1,157 @@
+
+<html >
+
+        <style>
+           h1{
+	color: rgb(7, 0, 100);
+    text-align: center;
+	}
+
+    #quiz{
+	/* margin-left: 350px; */
+	background: #d2def2;
+	border-radius: 20px;
+	/* float: left;
+    width: 800px; */
+}
+.button{
+background: green;
+border-radius: 20px;
+font-size: 20px;
+
+width: 35%;
+    height: 50px;
+}
+a{
+    margin-left: 600px;
+    background: #d2def2;
+}
+.button1{
+    width: 35%;
+    height: 50px;
+    background:  #123456;
+    border-radius: 20px;
+    font-size: 20px;
+} 
+#blinking{
+	animation:blinkingText 1s infinite;
+}
+@keyframes blinkingText{
+	0%{     color: #000;    }
+	49%{    color: transparent; }
+	50%{    color: transparent; }
+	99%{    color:transparent;  }
+	100%{   color: #000;    }
+}
+ol{
+    font-size: 20px;
+}
+a{
+   margin-left: 0px; 
+}
+      </style>
+        
+        <body>
+                <h1 id='blinking'>English Quiz</h1>
+	 
+                <form id="quiz" name='quiz'>
+         
+                <ol type="I">
+    
+                    <br><li><p>The anchorage is a place where the ship was......</p>
+                    <input type="radio" name="question1" value='anchor'>anchor<br>
+                    <input type="radio"  name="question1" value="anchored">anchored<br>
+                    <input type="radio"  name="question1" value="recieved">recieved<br</li>
+                
+                <li><p>Adverb of various is......</p>
+                    <input type="radio" name="question2" value="variously">variously<br>
+                    <input type="radio"  name="question2" value="vaoriuusly">vaoriuusly<br>
+                    <input type="radio"  name="question2" value="variouslly">variouslly<br></li>
+                
+                <li><p>The same meaning of some-time is......</p>
+                    <input type="radio"  name="question3" value="long time">long time<br>
+                    <input type="radio" name="question3" value="little time">little time<br>
+                    <input type="radio"  name="question3" value="rather a long time">rather a long time<br> </li>
+             
+                    <li><p>It was also known that there are two kinds of ......</p>
+                        <input type="radio" name="question4" value='blood'>blood<br>
+                        <input type="radio"  name="question4" value="blood cells">blood cells<br>
+                        <input type="radio"  name="question4" value="blood vessels">blood vessels<br</li>
+                    
+                    <li><p>A brief word needs to be said about .... in fiction.</p>
+                        <input type="radio"  name="question5" value="characters">characters<br>
+                        <input type="radio"  name="question5" value="vharac">vharac<br>
+                        <input type="radio" name="question5" value="chateoters">chateoters<br></li>
+                    
+                    <li><p>Hindley and .... contented themselves with looking and listening till peace was restored</p>
+                        <input type="radio" name="question6" value="Cathy">Cathy<br>
+                        <input type="radio"  name="question6" value="Cauthy">Cauthy<br>
+                        <input type="radio"  name="question6" value="Cathlly">Cathlly<br> </li>
+                    
+                    <li><p>Though all these facts were familiar to.... men at the end of the sixteen,century.</p>
+                        <input type="radio"  name="question7" value="medicine">medicine<br>
+                        <input type="radio"  name="question7" value="medical">medical<br>
+                        <input type="radio" name="question7" value="medically">medically<br></li>
+                         
+                         <li><p>Wheels are used today many.... besides carrying things</p>
+                             <input type="radio"  name="question8" value="puepuses">puepuses<br>
+                             <input type="radio" name="question8" value="reuposes">reuposes<br>
+                             <input type="radio"  name="question8" value="purposes">purposes<br></li>
+                             <!--  -->
+                         
+                        
+             </ol>
+                <br><br>
+                <input type="button" class="button" value="Finished" onclick="check()">
+                
+                
+                </form>
+               
+         
+            <a href="index.html"><button class="button1">Back</button></a>
+         
+            <script>
+                function check(){
+	
+	var question1=document.quiz.question1.value;
+	var question2=document.quiz.question2.value;
+	var question3=document.quiz.question3.value;
+    var question4=document.quiz.question4.value;
+	var question5=document.quiz.question5.value;
+	var question6=document.quiz.question6.value;
+    var question7=document.quiz.question7.value;
+	var question8=document.quiz.question8.value;
+
+	var correct=0;
+	
+	if(question1=="anchored"){
+		correct++;
+	}
+	if(question2=="variously"){
+		correct++;
+	}
+	if(question3=="little time"){
+		correct++;
+	}
+    if(question4=="blood vessels"){
+		correct++;
+	}
+	if(question5=="characters"){
+		correct++;
+	}
+	if(question6=="Cathy"){
+		correct++;
+	}
+    if(question7=="medical"){
+		correct++;
+	}
+	if(question8=="purposes"){
+		correct++;
+	}
+alert("You got "+correct+" marks ");
+
+}
+            </script>
+            
+        </body>
+        </html>

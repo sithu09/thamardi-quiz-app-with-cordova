@@ -1,0 +1,158 @@
+
+<html >
+
+        <style>
+      h1{
+	color: rgb(7, 0, 100);
+    text-align: center;
+	}
+
+    #quiz{
+	/* margin-left: 350px; */
+	background: #d2def2;
+	border-radius: 20px;
+	/* float: left;
+    width: 800px; */
+}
+.button{
+background: green;
+border-radius: 20px;
+font-size: 20px;
+
+width: 35%;
+    height: 50px;
+}
+a{
+    margin-left: 600px;
+    background: #d2def2;
+}
+.button1{
+    width: 35%;
+    height: 50px;
+    background:  #123456;
+    border-radius: 20px;
+    font-size: 20px;
+} 
+#blinking{
+	animation:blinkingText 1s infinite;
+}
+@keyframes blinkingText{
+	0%{     color: #000;    }
+	49%{    color: transparent; }
+	50%{    color: transparent; }
+	99%{    color:transparent;  }
+	100%{   color: #000;    }
+}
+ol{
+    font-size: 20px;
+}
+a{
+   margin-left: 0px; 
+}
+
+        </style>
+        
+        <body>
+                <h1 id='blinking'>Physics Quiz</h1>
+	 
+                <form id="quiz" name='quiz'>
+         
+                <ol type="I">
+    
+                    <br> <li><p>Human beging,tree,book,etc are  ............ bodies.</p>
+                    <input type="radio" name="question1" value='nonluminous'>nonluminous<br>
+                    <input type="radio"  name="question1" value="luminous">luminous<br>
+                    <input type="radio"  name="question1" value="nothing">nothing<br</li>
+                
+                <li><p>......... is a unit of pressure equivalent to a force of 1 newton acting on 1 m*m.</p>
+                    <input type="radio" name="question2" value="Pascal">Pascal<br>
+                    <input type="radio"  name="question2" value="pressure">Pressure<br>
+                    <input type="radio"  name="question2" value="Atomospheric">Atomospheric<br></li>
+                
+                <li><p>The relation speed = frequency * wavelength which applies to all forms of wave motion. </p>
+                    <input type="radio"  name="question3" value="Wavelegth">Wavelegth<br>
+                    <input type="radio" name="question3" value="Wave">Wave<br>
+                    <input type="radio"  name="question3" value="Transverse">Transverse<br> </li>
+             
+                    <li><p>The flow of charge through  a circuit in one direction only.</p>
+                        <input type="radio" name="question4" value='DC'>DC<br>
+                        <input type="radio"  name="question4" value="AC">AC<br>
+                        <input type="radio"  name="question4" value="Nothing">Nothing<br</li>
+                    
+                    <li><p>Heat require to change the temperatue of  1kg mass of water by 1K is called .........</p>
+                        <input type="radio"  name="question5" value="2kilocalories">2kilocalories<br>
+                        <input type="radio"  name="question5" value="3kilocalories">3kilocalories<br>
+                        <input type="radio" name="question5" value="1kilocalories">1kilocalories<br></li>
+                    
+                    <li><p>The lowest temperature (......) that any subtance can reach.</p>
+                        <input type="radio"  name="question6" value="-277C">-277C<br>
+                        <input type="radio" name="question6" value="-273C">-273C<br>
+                        <input type="radio"  name="question6" value="-267C">-267C<br> </li>
+                    
+                    <li><p> ....... is the unit to measure electric current</p>
+                        <input type="radio"  name="question7" value="Capacitor">Capacitor<br>
+                        <input type="radio"  name="question7" value="Conductor">Conductor<br>
+                        <input type="radio" name="question7" value="Ampere">Ampere<br></li>
+                         
+                         <li><p>........ are transverse waves.</p>
+                             <input type="radio"  name="question8" value="Compressional">Compressional<br>
+                             <input type="radio" name="question8" value="Light">Light<br>
+                             <input type="radio"  name="question8" value="Sound">Sound<br></li>
+                             <!--  -->
+                         
+                        
+             </ol>
+                <br><br>
+                <input type="button" class="button" value="Finished" onclick="check()">
+                
+                
+                </form>
+              
+         
+            <a href="index.html"><button class="button1">Back</button></a>
+         
+            <script>
+                function check(){
+	
+	var question1=document.quiz.question1.value;
+	var question2=document.quiz.question2.value;
+	var question3=document.quiz.question3.value;
+    var question4=document.quiz.question4.value;
+	var question5=document.quiz.question5.value;
+	var question6=document.quiz.question6.value;
+    var question7=document.quiz.question7.value;
+	var question8=document.quiz.question8.value;
+
+	var correct=0;
+	
+	if(question1=="nonluminous"){
+		correct++;
+	}
+	if(question2=="Pascal"){
+		correct++;
+	}
+	if(question3=="Wave"){
+		correct++;
+	}
+    if(question4=="DC"){
+		correct++;
+	}
+	if(question5=="1kilocalories"){
+		correct++;
+	}
+	if(question6=="-273C"){
+		correct++;
+	}
+    if(question7=="Ampere"){
+		correct++;
+	}
+	if(question8=="Light"){
+		correct++;
+	}
+alert("You got "+correct+" marks ");
+
+}
+            </script>
+            
+        </body>
+        </html>

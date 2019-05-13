@@ -1,0 +1,159 @@
+
+<html >
+
+        <style>
+          h1{
+	color: rgb(7, 0, 100);
+    text-align: center;
+	}
+
+    #quiz{
+	/* margin-left: 350px; */
+	background: #d2def2;
+	border-radius: 20px;
+	/* float: left;
+    width: 800px; */
+}
+.button{
+background: green;
+border-radius: 20px;
+font-size: 20px;
+
+width: 35%;
+    height: 50px;
+}
+a{
+    margin-left: 600px;
+    background: #d2def2;
+}
+.button1{
+    width: 35%;
+    height: 50px;
+    background:  #123456;
+    border-radius: 20px;
+    font-size: 20px;
+} 
+#blinking{
+	animation:blinkingText 1s infinite;
+ 
+}
+@keyframes blinkingText{
+	0%{     color: #000;    }
+	49%{    color: transparent; }
+	50%{    color: transparent; }
+	99%{    color:transparent;  }
+	100%{   color: #000;    }
+}
+ol{
+    font-size: 20px;
+}
+a{
+   margin-left: 0px; 
+}
+
+        </style>
+        
+        <body>
+                <h1 id='blinking'>Chemistry Quiz</h1>
+	 
+                <form id="quiz" name='quiz'>
+         
+                <ol type="I" class='ol'>
+    
+                <br><li><p>Heat is .... when calcium reacts with water.</p>
+                    <input type="radio" name="question1" value='absorbed'>absorbed<br>
+                    <input type="radio"  name="question1" value="evolved">evolved<br>
+                    <input type="radio"  name="question1" value="produced">produced<br</li>
+                
+                <li><p>......... is a unit of pressure equivalent to a force of 1 newton acting on 1 m*m.</p>
+                    <input type="radio" name="question2" value="air">air<br>
+                    <input type="radio"  name="question2" value="nitrogen">nitrogen<br>
+                    <input type="radio"  name="question2" value="carbon dioxide">carbon dioxide<br></li>
+                
+                <li><p>The relation speed = frequency * wavelength which applies to all forms of wave motion. </p>
+                    <input type="radio"  name="question3" value="mixture">mixture<br>
+                    <input type="radio"  name="question3" value="compound">compound<br>
+                    <input type="radio" name="question3" value="element">element<br></li>
+             
+                    <li><p>The flow of charge through  a circuit in one direction only.</p>
+                        <input type="radio" name="question4" value='high'>high<br>
+                        <input type="radio"  name="question4" value="low">low<br>
+                        <input type="radio"  name="question4" value="medium">medium<br</li>
+                    
+                    <li><p>Heat require to change the temperatue of  1kg mass of water by 1K is called .........</p>
+                        <input type="radio"  name="question5" value="bitter">bitter<br>
+                        <input type="radio"  name="question5" value="sweet">sweet<br>
+                        <input type="radio" name="question5" value="sour">sour<br></li>
+                    
+                    <li><p>The lowest temperature (......) that any subtance can reach.</p>
+                        <input type="radio"  name="question6" value=10>10<br>
+                        <input type="radio" name="question6" value=12>12<br>
+                        <input type="radio"  name="question6" value=14>14<br> </li>
+                    
+                    <li><p> ....... is the unit to measure electric current.</p>
+                        <input type="radio"  name="question7" value="NaCL">NaCL<br>
+                        <input type="radio"  name="question7" value="NaNO">NaNO<br>
+                        <input type="radio" name="question7" value="NaOH">NaOH<br></li>
+                         
+                         <li><p>Addition of soluble  alkalis(NaOH,KOH) to soluble salts of heavy metals give .......... hydroxides.</p>
+                             <input type="radio"  name="question8" value="soluble">soluble<br>
+                             <input type="radio" name="question8" value="insoluble">insoluble<br>
+                             <input type="radio"  name="question8" value="different">different<br></li>
+                             <!--  -->
+                         
+                        
+             </ol>
+                <br><br>
+                <input type="button" class="button" value="Finished" onclick="check()">
+                
+                
+                </form>
+               
+         
+                <div id="back"><a href="index.html"><button class="button1">Back</button></a></div>
+         
+            <script>
+                function check(){
+	
+	var question1=document.quiz.question1.value;
+	var question2=document.quiz.question2.value;
+	var question3=document.quiz.question3.value;
+    var question4=document.quiz.question4.value;
+	var question5=document.quiz.question5.value;
+	var question6=document.quiz.question6.value;
+    var question7=document.quiz.question7.value;
+	var question8=document.quiz.question8.value;
+
+	var correct=0;
+	
+	if(question1=="produced"){
+		correct++;
+	}
+	if(question2=="air"){
+		correct++;
+	}
+	if(question3=="compound"){
+		correct++;
+	}
+    if(question4=="high"){
+		correct++;
+	}
+	if(question5=="sour"){
+		correct++;
+	}
+	if(question6==12){
+		correct++;
+	}
+    if(question7=="NaCL"){
+		correct++;
+	}
+	if(question8=="insoluble"){
+		correct++;
+	}
+alert("You got "+correct+" marks ");
+
+}
+            </script>
+            
+        </body>
+        </html>
